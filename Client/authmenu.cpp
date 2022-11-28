@@ -2,7 +2,7 @@
 #include "ui_authmenu.h"
 #include <qDebug>
 #include <QRegularExpression>
-
+//commit and push are working
 
 AuthMenu::AuthMenu(QWidget *parent)
     : QMainWindow(parent),
