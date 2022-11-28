@@ -38,7 +38,7 @@ AuthMenu::on_SignButton_clicked()
     emit signIn(login, password);
 }
 
-
+// something
 
 void
 AuthMenu::setStatus(const QString &status)
