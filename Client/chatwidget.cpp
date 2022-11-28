@@ -29,7 +29,6 @@ ChatWidget::addParticipant(const UserData &username)
 {
     auto participant = new QListWidgetItem;
     participant->setFont(username.getFont());
-    participant->setTextColor(username.getColor());
     participant->setText(username.getUsername());
 
     // Disable selecting participant in list widget
@@ -43,7 +42,6 @@ void
 ChatWidget::addMessage(const Message &msg)
 {
     auto item = new QListWidgetItem;
-    item->setTextColor(msg.getTextColor());
     item->setFont(msg.getTextFont());
     item->setText(msg.getSender() + ":" + msg.getMessage());
 

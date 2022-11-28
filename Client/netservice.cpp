@@ -77,8 +77,8 @@ NetService::onSocketDisconnected()
 void
 NetService::onConnectionTimeOut()
 {
-    socket->abort();
-    menu->setStatus("Connection timeout.");
+    //socket->abort();
+    //menu->setStatus("Connection timeout.");
 }
 
 
@@ -89,13 +89,12 @@ NetService::readAuthAnswer(QDataStream &readStream)
     AuthAnswer ans;
     readStream >> ans;
 
-    if (!ans.isSigned())
-    {
-        menu->setStatus("Authentication error.");
-        socket->abort();
-        return;
-    }
-
+//    if (!ans.isSigned())
+//    {
+//        menu->setStatus("Authentication error.");
+//        socket->abort();
+//        return;
+//    }
     menu->close();
     chat->show();
 }
